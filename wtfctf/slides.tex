@@ -1,0 +1,212 @@
+% Created 2019-06-15 Sat 00:00
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{tabu}
+\usepackage{minted}
+\usepackage[english]{babel}
+\hypersetup{pdfauthor="Vasilij Schneidermann", pdftitle="WTF CTF", colorlinks, linkcolor=, urlcolor=blue}
+\setminted{fontsize=\footnotesize,escapeinside=||}
+\usetheme{Rochester}
+\usecolortheme[RGB={87,83,170}]{structure}
+\author{Vasilij Schneidermann}
+\date{June 2019}
+\title{WTF CTF}
+\hypersetup{
+ pdfauthor={Vasilij Schneidermann},
+ pdftitle={WTF CTF},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.2 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\AtBeginSection{\frame{\sectionpage}}
+
+\section{WTF CTF}
+\label{sec:org35fdd3b}
+
+\begin{frame}[fragile,label={sec:org6819f97}]{About}
+ \begin{itemize}
+\item Vasilij Schneidermann, 26
+\item Software developer, bevuta IT GmbH
+\item mail@vasilij.de
+\item \url{https://github.com/wasamasa}
+\item Played a few CTFs and helped organizing one
+\item Chanop on \texttt{\#wargames} at OverTheWire IRC network
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgc40206c}]{What is a CTF?}
+\begin{itemize}
+\item Hacker contest
+\item Task: Capturing flags for points
+\item Timeboxed
+\item Competitive
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org835f98a}]{Why should I care?}
+\begin{itemize}
+\item It's fun
+\item \sout{Mess} compete with the best
+\item Great learning opportunity
+\item Entry gateway to the infosec world
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org63f9548}]{How do they look like?}
+\begin{itemize}
+\item Attack and Defense
+\begin{itemize}
+\item Defend your own boxes, attack other boxes
+\item Not as popular, requires admin skills
+\end{itemize}
+\item Jeopardy
+\begin{itemize}
+\item Many tasks that can be completed independently
+\item Categorized into web/pwn/rev/forensic/stego/crypto/misc/\ldots{}
+\item Very popular
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orge620af6}]{Where/when do they happen?}
+\begin{itemize}
+\item All over the world
+\item Often it's online
+\item Sometimes it's local or requires admission
+\item \url{https://ctftime.org}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org5eed9e9}]{What stuff do they do at a Jeopardy event?}
+\begin{itemize}
+\item Web
+\item Binary Exploitation
+\item Reverse Engineering
+\item Forensics
+\item Steganography
+\item Cryptography
+\item Miscellaneous
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org5185dbc}]{What do they do during a Jeopardy event?}
+\begin{itemize}
+\item Register user/team
+\item Solve challenges and submit flags
+\item Report bugs
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org00f86f4}]{What do they do after a Jeopardy event?}
+\begin{itemize}
+\item Figure out how challenge XYZ was supposed to work
+\item Celebrate
+\item Vote on \url{https://ctftime.org}
+\item Publish writeups
+\item Look for the next CTF to compete in
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org6cb1e69}]{How do I learn this stuff?}
+\begin{itemize}
+\item Learn basics (your OS, programming, \ldots{})
+\item Online labs (wargames, \url{http://wechall.net})
+\item Set up a lab (\url{https://vulnhub.net})
+\item Play an entry-level or highschool CTF
+\item Learn from your mistakes
+\item Study writeups
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org2de0739}]{Web}
+\begin{itemize}
+\item Learn to use your browser effectively
+\item Intercepting proxy (Burp)
+\item OWASP Top 10
+\item OverTheWire: Natas
+\item WebGoat
+\item Random stuff found on \url{https://vulnhub.net}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org1ed4e6e}]{Binary Exploitation}
+\begin{itemize}
+\item Classic Phrack articles
+\item\relax [Jon Erickson] Hacking: The Art of Exploitation
+\item LiveOverflow YouTube channel
+\item \url{https://microcorruption.com}
+\item OverTheWire (everything after Bandit/Natas/Krypton/Leviathan)
+\item \url{http://io.netgarage.org/}
+\item \url{http://smashthestack.org/}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label={sec:orgbae5dfc}]{Reverse Engineering}
+ \begin{itemize}
+\item Know your OS and toolchain (binutils) well
+\item Learn IDA/Ghidra/Hopper/Binary Ninja/radare2
+\item\relax [Dennis Yurichev] Reverse Engineering for Beginners
+\item \texttt{angr} is pretty cool
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label={sec:org0b0113b}]{Forensics}
+ \begin{itemize}
+\item It's either packet analyzer captures or (broken) file systems
+\item Learn Wireshark
+\item \texttt{binwalk} is OK for carving
+\item radare2 was originally developed for this purpose
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label={sec:org1bb3ec7}]{Steganography}
+ \begin{itemize}
+\item Lots of guessing
+\item Common tools:
+\begin{itemize}
+\item \texttt{strings}
+\item \texttt{binwalk}
+\item \texttt{exiftool}
+\item \texttt{steghide}
+\item \texttt{zsteg}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orge7aa7ad}]{Cryptography}
+\begin{itemize}
+\item \url{https://cryptopals.com}
+\item Lots of RSA/ECC/linear algebra
+\item Some (sage) math may be required
+\item Sometimes they just throw classic ciphers at you\ldots{}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgead0c51}]{Miscellaneous}
+\begin{itemize}
+\item Programming challenges (typically involving the network)
+\item Knowing trivia about your OS/toolchain
+\item Grab bag
+\end{itemize}
+\end{frame}
+\end{document}

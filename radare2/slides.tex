@@ -1,0 +1,133 @@
+% Created 2019-06-15 Sat 11:04
+% Intended LaTeX compiler: pdflatex
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{tabu}
+\usepackage{minted}
+\usepackage[english]{babel}
+\hypersetup{pdfauthor="Vasilij Schneidermann", pdftitle="Actually using radare2", colorlinks, linkcolor=, urlcolor=blue}
+\setminted{fontsize=\footnotesize,escapeinside=||}
+\usetheme{Rochester}
+\usecolortheme[RGB={87,83,170}]{structure}
+\author{Vasilij Schneidermann}
+\date{June 2019}
+\title{Actually using radare2}
+\hypersetup{
+ pdfauthor={Vasilij Schneidermann},
+ pdftitle={Actually using radare2},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 26.2 (Org mode 9.1.9)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\begin{frame}{Outline}
+\tableofcontents
+\end{frame}
+
+\AtBeginSection{\frame{\sectionpage}}
+
+\section{Actually using radare2}
+\label{sec:orgf407704}
+
+\begin{frame}[label={sec:orgfa62179}]{About}
+\begin{itemize}
+\item Vasilij Schneidermann, 26
+\item Software developer, bevuta IT GmbH
+\item mail@vasilij.de
+\item \url{https://github.com/wasamasa}
+\item radare2 contributor
+\item I use it for all things binary
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orge9ad4d7}]{What's radare2?}
+\begin{itemize}
+\item Initially: Forensics toolkit (raw data recovery)
+\item Hex/memory editor
+\item RE toolkit (assembler/disassembler/analysis)
+\item Binary exploitation toolkit (ROP/shellcode)
+\item Debugger
+\item Anything thanks to scripting
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org7cfbff0}]{Why would I want to use it?}
+\begin{itemize}
+\item It feels like Vim and Emacs combined
+\item Textual UI
+\item Portable, self-contained
+\item Flexible, scriptable
+\item Easy to contribute to
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:orgf910c5b}]{Why would I want to not use it?}
+\begin{itemize}
+\item It feels like Vim and Emacs combined
+\item Buggy, high churn
+\item Docs could be better
+\item Not up to par to commercial tools (decompilation particularly)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label={sec:orgda99b00}]{How do I start using it?}
+ \begin{itemize}
+\item Launch \texttt{r2 crackme}
+\item Do some analysis (\texttt{aaa})
+\item Enter visual mode (\texttt{v})
+\item Change to disassembly view (\texttt{p})
+\item Go to main function (\texttt{g main})
+\item Jump between sections (\texttt{n/N})
+\item Read decompiled code (\texttt{:pdc}, requires \texttt{r2pm -i r2dec})
+\item View call graph (\texttt{V})
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label={sec:orgdb5e493}]{How do I figure out things?}
+ \begin{itemize}
+\item Append \texttt{?} to a command to get help
+\item Press \texttt{?} in visual (panel) mode
+\item \url{https://radare.gitbooks.io/radare2book/content/}
+\item \texttt{\#radare} channel on Freenode
+\item Bridges to Telegram group
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile,label={sec:org4268ed9}]{Commands worth remembering}
+ \begin{itemize}
+\item \texttt{p} (print)
+\item \texttt{w} (write)
+\item \texttt{s} (seek)
+\item \texttt{?} (help)
+\item Look up the rest
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org3423b82}]{Still stuck?}
+\begin{center}
+\includegraphics[width=.9\linewidth]{./img/source-luke.jpg}
+\end{center}
+\end{frame}
+
+\begin{frame}[label={sec:org10bba30}]{Demo time}
+\begin{itemize}
+\item Steganography
+\item CHIP-8 analysis
+\item Crackme 1 \& 2
+\end{itemize}
+\end{frame}
+\end{document}
