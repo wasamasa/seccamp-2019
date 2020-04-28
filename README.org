@@ -1,3 +1,1 @@
-* About
-
-Slides and demo stuff for the Security Barcamp 2019 in Cologne
+Moved to https://depp.brause.cc/talks/
